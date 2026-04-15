@@ -29,3 +29,4 @@ Thumbs.db
 
 # Metadatos de empaquetado de Python
 *.egg-info/
+/site/

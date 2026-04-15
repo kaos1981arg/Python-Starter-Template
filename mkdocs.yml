@@ -1,0 +1,16 @@
+site_name: Mi Proyecto Documentado
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]  # <-- IMPORTANTE: Indica dónde está tu código
+          options:
+            show_source: true
+            show_root_heading: true
+            inheritance_diagrams: true # Si quieres ver diagramas de clases

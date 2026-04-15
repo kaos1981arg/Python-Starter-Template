@@ -11,7 +11,7 @@ def main() -> None:
     """
     logger.info("ChessVision application started.")
     # Add your main application logic here
-    logger.info("ChessVision application finished.")
+    logger.info("ChessVision application finished!!")
 
 
 if __name__ == "__main__":

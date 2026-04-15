@@ -1,5 +1,5 @@
-![CI Status](https://github.com/tu-usuario/tu-repo/actions/workflows/ci.yml/badge.svg)
-![Coverage](https://img.shields.io/codecov/c/github/tu-usuario/tu-repo)
+![CI Status](https://github.com/kaos1981arg/Python-Starter-Template/.github/workflows/ci.yml/badge.svg)
+![Coverage](https://img.shields.io/codecov/c/github/kaos1981arg/Python-Starter-Template)
 
 # 🚀 Python Starter Template
 

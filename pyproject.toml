@@ -4,7 +4,16 @@ version = "0.1.0"
 description = "Python Project Framework"
 readme = "README.md"
 requires-python = ">=3.14"
+
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=1.20.1",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.15.10",
+]
 
 [tool.uv]
 package = true
@@ -15,11 +24,36 @@ packages = ["src/my_project"]
 [tool.ruff]
 line-length = 88
 target-version = "py314"
-src = ["src"]
+src = ["src", "tests"]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "RET", "SIM", "ARG", "PTH", "ERA", "PL", "RUF"]
+select = [
+    "E",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "B",
+    "A",
+    "C4",
+    "C90",
+    "RET",
+    "SIM",
+    "ARG",
+    "PTH",
+    "ERA",
+    "PL",
+    "RUF"]
 ignore = []
+
+[tool.ruff.lint.mccabe]
+# Aquí es donde C901 toma su valor límite
+max-complexity = 10
+
+[tool.ruff.format]
+# Configuración del formateador (reemplaza a Black)
+quote-style = "double"
+indent-style = "space"
 
 [tool.mypy]
 python_version = "3.14"
@@ -42,11 +76,20 @@ module = "pandas.*"
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
+# Dónde debe buscar Pytest las pruebas
 testpaths = ["tests"]
-pythonpath = ["src"]
-addopts = "--cov=src --cov-report=term-missing"
 
-[dependency-groups]
-dev = [
-    "mypy>=1.20.1",
+# Configuración de la consola y visualización
+# -ra: Muestra resumen de todos los tests excepto los pasados
+# --strict-markers: Evita errores tipográficos en los marcadores
+# --tb=short: Muestra trazas de error más cortas y legibles
+addopts = "-ra --strict-markers --tb=short --cov=src --cov-report=term-missing"
+
+# Registra tus propios marcadores para evitar advertencias
+markers = [
+    "slow: tests que tardan mucho en ejecutarse",
+    "integration: pruebas que requieren servicios externos",
 ]
+
+# Indica qué archivos se consideran tests
+python_files = ["test_*.py"]

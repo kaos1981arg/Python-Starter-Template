@@ -90,7 +90,7 @@ testpaths = ["tests"]
 # -ra: Muestra resumen de todos los tests excepto los pasados
 # --strict-markers: Evita errores tipográficos en los marcadores
 # --tb=short: Muestra trazas de error más cortas y legibles
-addopts = "-ra --strict-markers --tb=short --cov=src --cov-report=term-missing"
+addopts = "-ra --strict-markers --tb=short --cov=src --cov-report=term-missing --cov-report=xml"
 
 # Registra tus propios marcadores para evitar advertencias
 markers = [

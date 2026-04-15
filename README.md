@@ -1,6 +1,9 @@
+![CI Status](https://github.com/tu-usuario/tu-repo/actions/workflows/ci.yml/badge.svg)
+![Coverage](https://img.shields.io/codecov/c/github/tu-usuario/tu-repo)
+
 # 🚀 Python Starter Template
 
-Bienvenido a la documentación oficial de **mi-proyecto**. Esta plantilla está diseñada para ofrecer un entorno de desarrollo moderno, rápido y tipado utilizando `uv`.
+Bienvenido a la documentación oficial de **nombre-proyecto**. Esta plantilla está diseñada para ofrecer un entorno de desarrollo moderno, rápido y tipado utilizando `uv`.
 
 ---
 

@@ -1,4 +1,4 @@
-![CI Status](https://github.com/kaos1981arg/Python-Starter-Template/blob/main/.github/workflows/ci.yml/badge.svg)
+![CI Status](https://github.com/kaos1981arg/Python-Starter-Template/blob/.github/workflows/ci.yml/badge.svg)
 
 # 🚀 Python Starter Template
 

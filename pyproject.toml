@@ -1,0 +1,52 @@
+[project]
+name = "my_project"
+version = "0.1.0"
+description = "Python Project Framework"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/my_project"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "RET", "SIM", "ARG", "PTH", "ERA", "PL", "RUF"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.14"
+mypy_path = "src"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+show_error_codes = true
+
+# Para que ignore carpetas que no quieres revisar
+exclude = ["venv", ".venv"]
+
+[[tool.mypy.overrides]]
+# Configuración específica para librerías que NO tienen tipos (ejemplo: pandas)
+module = "pandas.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--cov=src --cov-report=term-missing"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.20.1",
+]

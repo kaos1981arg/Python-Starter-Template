@@ -1,5 +1,3 @@
-![CI Status](https://github.com/kaos1981arg/Python-Starter-Template/blob/main/.github/workflows/ci.yml/badge.svg)
-
 # 🚀 Python Starter Template
 
 Bienvenido a la documentación oficial de **nombre-proyecto**. Esta plantilla está diseñada para ofrecer un entorno de desarrollo moderno, rápido y tipado utilizando `uv`.
